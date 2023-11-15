@@ -10,13 +10,8 @@
 			in {
 				devShell = pkgs.mkShell {
 					buildInputs = with pkgs; [
-						nodejs-18_x
+						nodejs_21
 					];
-					shellHook = ''
-						mkdir -p .corepack
-						corepack enable --install-directory="./.corepack"
-						export PATH=$PATH:$(cd .corepack; pwd)
-					'';
 				};
 			}
 		);
